@@ -16,12 +16,12 @@ from joblib import Parallel, delayed
 
 
 
-client = MongoClient('mongodb://ec2-34-250-110-180.eu-west-1.compute.amazonaws.com:27017')
+client = MongoClient('mongodb:###')
 db = client['C8Geo']
-collection = db['locations']
+collection = db['###']
 
 url = 'https://api.opencagedata.com/geocode/v1/json?q='
-api_key = '&pretty=1&key=c2cea158878d4b51a79fd9aed4495e72'
+api_key = '###'
 
 
 ObjectIdList = json.load(open(r'./Desktop/ObjectIdList.json'))
