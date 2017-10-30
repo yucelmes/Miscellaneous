@@ -10,9 +10,9 @@ import calendar
 import datetime
 
 
-client = MongoClient('mongodb://ec2-34-248-97-137.eu-west-1.compute.amazonaws.com:27017')
-db = client['C8Geo']
-collection = db['locations']
+client = MongoClient('###')
+db = client['###']
+collection = db['###']
 
 
 BQ_Locs = pd.read_excel('/opt/ds/2017-07-27 - 2017-07-30 B&Q LU.xlsx')
