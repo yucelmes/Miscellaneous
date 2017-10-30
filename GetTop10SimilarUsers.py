@@ -24,14 +24,14 @@ def WeightedCorrelation(Data_1, Data_2, Weights):
 
 
 
-conn_string = "host='c-sec-prod.cilede3fhork.eu-west-1.rds.amazonaws.com' dbname='c_db' user='mesut' password='TeW15WQBfA7i'"
+conn_string = "host='###'"
 conn = psycopg2.connect(conn_string)
 conn.autocommit = True
 cursor = conn.cursor()
         
 
-AudienceSimilarityDictionary = json.load(open(r'.\Documents\GitHub\cayenne\AudienceSimilarityDictionary.json'))
-AudienceThresholds = json.load(open(r'.\Documents\GitHub\cayenne\AudienceThresholds.json'))
+AudienceSimilarityDictionary = json.load(open(r'.\Documents\GitHub\###\AudienceSimilarityDictionary.json'))
+AudienceThresholds = json.load(open(r'.\Documents\GitHub\###\AudienceThresholds.json'))
 
 
 cursor.execute("select user_id from integrations where type = 'spotify' and is_deleted = 'False'")
